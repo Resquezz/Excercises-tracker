@@ -48,7 +48,7 @@ class TrainingsBloc extends Bloc<TrainingsEvent, TrainingsState> {
 
       add(RefreshTrainings());
     } catch (e) {
-      emit(TrainingsError(error: 'Failed to delete training: ${e.toString()}'));
+      emit(TrainingsError(error: 'Failed to delete training. Error message: ${e.toString()}'));
     }
   }
 }
